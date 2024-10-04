@@ -9,6 +9,15 @@ function loadBack (backSrc) {
   newImg.src = backSrc;
 }
 
+function loadProjectImage (backSrc, projectID) {
+  let newImg = new Image();
+
+  newImg.onload = function () {
+    document.getElementById(projectID).style.backgroundImage = "url('" + newImg.src + "')";
+  }
+  newImg.src = backSrc;
+}
+
 function waitForElement(querySelector, timeout){
   return new Promise((resolve, reject)=>{
     var timer = false;
@@ -36,3 +45,5 @@ function waitForElement(querySelector, timeout){
 // }).catch(() => {
 //   console.log("Error: did not load!");
 // });
+
+// loadProjectImage("/images/projects/sboat.jpeg", "sboat-img");
