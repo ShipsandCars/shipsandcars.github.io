@@ -50,7 +50,9 @@ body {
 
 .project {
   display: flex;
+  border: 1px solid black;
   gap: 10px;
+  margin: 3px;
 }
 
 .project-img {
@@ -67,6 +69,11 @@ body {
 .project-nack {
   width: 40%;
   height: 30%;
+  border-radius: 3px;
+}
+
+.project-page {
+  display: none;
 }
 
 .flex {

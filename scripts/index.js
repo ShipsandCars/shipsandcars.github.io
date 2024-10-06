@@ -47,3 +47,23 @@ function waitForElement(querySelector, timeout){
 // });
 
 // loadProjectImage("/images/projects/sboat.jpeg", "sboat-img");
+
+const mainPage = document.getElementById("mainpage");
+
+const sboat = document.getElementById("sboat");
+const sboatPage = document.getElementById("sboat-page");
+
+sboat.onclick = function () {
+  
+}
+
+const paramsString = window.location;
+const searchParams = new URLSearchParams(paramsString);
+const qParam = searchParams.get("q");
+
+switch (qParam) {
+  case "sboat" :
+    mainPage.style.display = "none";
+    sboatPage.style.display = "block";
+    break;
+}
